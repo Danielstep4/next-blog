@@ -1,33 +1,19 @@
-import { GetStaticProps } from "next";
-import path from "path";
-import fs from "fs/promises";
 import React from "react";
-// import ReactMarkdown from "react-markdown";
-
-const FeaturedPosts: React.FC = () => {
+import ReactMarkdown from "react-markdown";
+import { FeturedPost } from "../../types/feturedPost";
+import gfm from "remark-gfm";
+const FeaturedPosts: React.FC<FeturedPost> = ({ feturedPost }): JSX.Element => {
   return (
     <section>
       <h1>Featured Posts</h1>
-
-      {/* <ReactMarkdown source={posts} /> */}
+      <ReactMarkdown
+        children={feturedPost}
+        className={"blog__post"}
+        plugins={[gfm]}
+        allowDangerousHtml={true}
+      />
     </section>
   );
 };
-
-// export const getStaticProps: GetStaticProps = async () => {
-//   let fileContent: string[];
-//   let feturedPost: string;
-//   try {
-//     fileContent = await fs.readdir(path.join(process.cwd(), "markdown-posts"));
-//     feturedPost = fileContent[0];
-//   } catch (error) {
-//     console.log(error);
-//   }
-//   return {
-//     props: {
-//       feturedPost,
-//     },
-//   };
-// };
 
 export default FeaturedPosts;
