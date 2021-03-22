@@ -1,27 +1,26 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import classes from "../../styles/Home/Welcome.module.scss";
 import GitHubIcon from "../Icons/GitHubIcon";
+import FacebookIcon from "../Icons/FacebookIcon";
 
 const Welcome: React.FC = () => {
   return (
-    <main id="welcome" className={classes.welcome}>
+    <section id="welcome" className={classes.welcome}>
       <Image
         src="/images/profile.png"
         alt="My profile picture"
         width={350}
         height={350}
       />
-      <h1>Hi, I'm Daniel!</h1>
+      <h1>Hi, I'm Daniel Stepanishin!</h1>
       <p>I want to start bloging about my life and my goals.</p>
-      <span>
-        If you enjoy the content make sure you subscribe to me on github
-      </span>
-      <a href="https://www.github.com/danielstep4">
+      <span>If you enjoy the content make sure you follow me on github</span>
+      <div>
         <GitHubIcon width="35" height="35" />
-      </a>
-    </main>
+        <FacebookIcon width="35" height="35" />
+      </div>
+    </section>
   );
 };
 
