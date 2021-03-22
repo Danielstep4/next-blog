@@ -1,1 +1,3 @@
-# Next.js Project 2
+# Next.js Blog Project
+
+### The Styling is PC first

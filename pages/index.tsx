@@ -1,9 +1,8 @@
-import Loading from "../components/Loading";
-
+import Welcome from "../components/Home/Welcome";
 export default function Home() {
   return (
     <>
-      <Loading />
+      <Welcome />
     </>
   );
 }

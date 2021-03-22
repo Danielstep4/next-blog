@@ -1,0 +1,32 @@
+$link-color: white;
+$link-hover: rgba(214, 48, 49, 1);
+.navbar {
+    background: #000000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #434343,
+        #000000
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.navbar__links {
+    display: flex;
+    height: 5rem;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navbar__link {
+    color: $link-color;
+    font-size: 2.2rem;
+    display: inline-block;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    &:first-child {
+        margin-right: auto;
+    }
+    &:hover {
+        color: $link-hover;
+    }
+}

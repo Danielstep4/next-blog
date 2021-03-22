@@ -1,0 +1,31 @@
+$text-color: white;
+.welcome {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #cb356b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #bd3f32, #cb356b); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #bd3f32,
+        #cb356b
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: $text-color;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    img {
+        width: 25rem;
+        height: 25rem;
+        border-radius: 100%;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+    p,
+    span {
+        font-size: 1.6rem;
+    }
+}
