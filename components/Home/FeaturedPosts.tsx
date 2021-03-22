@@ -10,7 +10,7 @@ const FeaturedPosts: React.FC<FeturedPost> = ({ feturedPost }): JSX.Element => {
         children={feturedPost}
         className={"blog__post"}
         plugins={[gfm]}
-        allowDangerousHtml={true}
+        allowDangerousHtml
       />
     </section>
   );
