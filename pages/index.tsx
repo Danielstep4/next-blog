@@ -6,7 +6,7 @@ import { readFile } from "fs/promises";
 import { BlogPost } from "../types/blogPost";
 const Home: React.FC<BlogPost> = ({ blogPost }) => {
   return (
-    <main>
+    <main style={{ marginBottom: "3rem" }}>
       <Welcome />
       <FeaturedPosts blogPost={blogPost} />
     </main>

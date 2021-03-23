@@ -8,7 +8,7 @@ const FacebookIcon: React.FC<IconProps> = ({ width, height, color }) => {
     fill: color && color,
   };
   return (
-    <a href="https://www.facebook.com/daniel.stepanishin">
+    <a href="https://www.facebook.com/daniel.stepanishin" target="_blank">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={width}

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 const Layout: React.FC = ({ children }) => {
@@ -13,8 +14,11 @@ const Layout: React.FC = ({ children }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Demo Blog</title>
       </Head>
-      <Navbar />
-      {children}
+      <main id="main">
+        <Navbar />
+        {children}
+        <Footer />
+      </main>
     </>
   );
 };
