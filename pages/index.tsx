@@ -3,33 +3,33 @@ import Welcome from "../components/Home/Welcome";
 import { GetStaticProps } from "next";
 import path from "path";
 import { readFile } from "fs/promises";
-import { FeturedPost } from "../types/feturedPost";
-const Home: React.FC<FeturedPost> = ({ feturedPost }) => {
+import { BlogPost } from "../types/blogPost";
+const Home: React.FC<BlogPost> = ({ blogPost }) => {
   return (
     <main>
       <Welcome />
-      <FeaturedPosts feturedPost={feturedPost} />
+      <FeaturedPosts blogPost={blogPost} />
     </main>
   );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  let feturedPost: string;
+  let blogPost: string;
   try {
-    feturedPost = await readFile(
+    blogPost = await readFile(
       path.join(process.cwd(), "markdown-posts", "first-post.md"),
       "utf-8"
     );
   } catch (error) {
     console.log(error);
   }
-  if (!feturedPost)
+  if (!blogPost)
     return {
       notFound: true,
     };
   return {
     props: {
-      feturedPost,
+      blogPost,
     },
   };
 };
